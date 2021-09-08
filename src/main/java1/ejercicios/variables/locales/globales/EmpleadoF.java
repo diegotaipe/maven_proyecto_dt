@@ -7,6 +7,8 @@ public class EmpleadoF {
 	public String diagnostico;
 	private String cedula;
 	private String medicacion;
+	public static String PAIS="Ecuador";
+	public static String PROVINCIA="Pichincha";
 
 	public void comer() {
 		// Variables Locales
