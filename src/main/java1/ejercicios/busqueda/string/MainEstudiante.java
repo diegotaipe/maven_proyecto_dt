@@ -3,7 +3,7 @@ package ejercicios.busqueda.string;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class MainEstudiante extends Estudiante{
+public class MainEstudiante extends Estudiante {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -11,28 +11,27 @@ public class MainEstudiante extends Estudiante{
 		Scanner lectorInt = new Scanner(System.in);
 		int n = 0;
 		String buscar;
+		int posicion = 0;
 
-		String listadoEstudiantes[] = new String[5]; // declarar array
+		Estudiante listadoEstudiantes[] = new Estudiante[5]; // declarar array
 
 		do {
-			int contador = 1;
 			System.out.println();
 			System.out.println("***********************");
 			System.out.println("1. Ingresar Estudiante ");
 			System.out.println("2. Buscar Estudiante ");
 			System.out.println("3. SALIR ");
 			System.out.println("***********************");
-			
 			n = lectorInt.nextInt();
 
 			if (n == 1) {
 				System.out.println("***** Ingresar Estudiante *****");
 				System.out.println("Ingrese cédula del estudiante: ");
-				for (int i = 0; i < 5; i++) {
-					System.out.print("estudiante " + contador + " : ");
-					contador++;
-					listadoEstudiantes[i] = lectorString.nextLine();
-				}
+				String cedula = lectorString.nextLine();
+				Estudiante estudiante1 = new Estudiante();
+				estudiante1.setCedula(cedula);
+				listadoEstudiantes[posicion] = estudiante1;
+				posicion++;
 				System.out.println(Arrays.toString(listadoEstudiantes));
 			}
 			if (n == 2) {
@@ -41,12 +40,16 @@ public class MainEstudiante extends Estudiante{
 				buscar = lectorString.nextLine();
 
 				for (int i = 0; i < 5; i++) {
-					boolean resultado = buscar.equals(listadoEstudiantes[i]);
+					Estudiante estudiante1 = listadoEstudiantes[i];
+					String cedula = estudiante1.getCedula();
+					boolean resultado = buscar.equals(cedula);
 
 					if (resultado == true) {
-						System.out.println("SI CONTIENE al estudiante: " + buscar);
-					} else {
-						//System.out.println("NO CONTIENE al estudiante: " + buscar);
+						System.out.println("SI CONTIENE");
+						break;
+
+					} else if (resultado == false) {
+						System.out.println("NO CONTIENE");
 					}
 				}
 			}

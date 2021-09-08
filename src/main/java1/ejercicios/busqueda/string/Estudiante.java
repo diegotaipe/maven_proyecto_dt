@@ -1,7 +1,7 @@
 package ejercicios.busqueda.string;
 
 public class Estudiante {
-	private String cedula;
+	protected String cedula;
 
 	public String getCedula() {
 		return cedula;
