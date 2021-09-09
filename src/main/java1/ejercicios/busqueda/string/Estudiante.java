@@ -15,5 +15,4 @@ public class Estudiante {
 	public String toString() {
 		return "Estudiante [cedula=" + cedula + "]";
 	}
-
 }

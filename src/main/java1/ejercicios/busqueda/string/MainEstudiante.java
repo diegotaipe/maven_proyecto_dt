@@ -38,24 +38,25 @@ public class MainEstudiante extends Estudiante {
 				System.out.println("***** Buscar Estudiante *****");
 				System.out.println("Ingrese cédula del estudiante: ");
 				buscar = lectorString.nextLine();
-
+				boolean resultado=false;
+				
 				for (int i = 0; i < 5; i++) {
-					Estudiante estudiante1 = listadoEstudiantes[i];
-					String cedula = estudiante1.getCedula();
-					boolean resultado = buscar.equals(cedula);
+					Estudiante estudiante = listadoEstudiantes[i];
+					String cedula = estudiante.getCedula();
+					boolean resultadoLocal = buscar.equals(cedula);
 
-					if (resultado == true) {
-						System.out.println("SI CONTIENE");
-						break;
-
-					} else if (resultado == false) {
-						System.out.println("NO CONTIENE");
+					if (resultadoLocal == true) {
+						resultado=true;
 					}
+				}
+				if(resultado==true) {
+					System.out.println("Estudiante encontrado: ");
+				}else {
+					System.out.println("Estudiante No encontrado");
 				}
 			}
 		} while (n != 3);
 		System.out.println("listado final de estudiantes");
 		System.out.println(Arrays.toString(listadoEstudiantes));
 	}
-
 }
