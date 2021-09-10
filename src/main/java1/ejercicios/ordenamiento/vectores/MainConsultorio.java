@@ -61,6 +61,7 @@ public class MainConsultorio {
 
 				}
 			}
+			
 		} while (opcion != 3);
 		System.out.println("Gracias por usar el sistema");
 		// System.out.println("listado final de estudiantes");
