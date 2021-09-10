@@ -58,7 +58,6 @@ public class MainConsultorio {
 				for (int i = 0; i < listadoPacientes.length; i++) {
 
 					System.out.println(listadoPacientes[i]);
-
 				}
 			}
 		} while (opcion != 3);

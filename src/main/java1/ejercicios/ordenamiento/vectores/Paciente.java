@@ -53,5 +53,4 @@ public class Paciente implements Comparable<Paciente> {
 	public String toString() {
 		return "Paciente: " + nombre + " - Apellido: " + apellido + " - Edad: " + edad + " - Síntoma: " + sintoma;
 	}
-
 }
